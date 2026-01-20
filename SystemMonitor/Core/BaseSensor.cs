@@ -4,7 +4,7 @@ public abstract class BaseSensor : ISensor
 {
     public string Name { get; protected set;}
     public string DisplayText { get; protected set;}
-    public double BarValue { get; protected set; }
+    public double CurrentValue { get; protected set; }
     
     public abstract void Update();
 
@@ -12,6 +12,6 @@ public abstract class BaseSensor : ISensor
     {
         Name = name;
         DisplayText = displayText;
-        BarValue = 0;
+        CurrentValue = 0;
     }
 }
