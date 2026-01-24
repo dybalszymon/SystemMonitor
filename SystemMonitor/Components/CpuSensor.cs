@@ -6,7 +6,7 @@ namespace SystemMonitor.Components;
 public class CpuSensor : BaseSensor
 {
     private PerformanceCounter _cpuCounter;
-    public CpuSensor() : base("CPU", "Initializing CPU sensor")
+    public CpuSensor() : base("CPU")
     {
         _cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
         _cpuCounter.NextValue();

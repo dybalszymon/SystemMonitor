@@ -48,15 +48,15 @@
           "dependencies": {
             "LiveChartsCore.SkiaSharpView.WPF": {
               "target": "Package",
-              "version": "[2.0.0-rc6.1, )"
+              "version": "[2.0.0-rc2, )"
             },
             "System.Diagnostics.PerformanceCounter": {
               "target": "Package",
-              "version": "[10.0.2, )"
+              "version": "[9.0.0, )"
             },
             "System.Management": {
               "target": "Package",
-              "version": "[10.0.2, )"
+              "version": "[9.0.0, )"
             }
           },
           "imports": [

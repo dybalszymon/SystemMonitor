@@ -5,7 +5,7 @@ namespace SystemMonitor.Components;
 public class DiskSensor : BaseSensor
 {
     private readonly DriveInfo _drive;
-    public DiskSensor(string driveName) : base($"Disk {driveName}", $"Initializing disk {driveName} sensor")
+    public DiskSensor(string driveName) : base($"Disk {driveName}")
     {
         _drive = new DriveInfo(driveName);
     }

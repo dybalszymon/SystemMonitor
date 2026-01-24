@@ -8,7 +8,7 @@ public class RamSensor : BaseSensor
 {
     private PerformanceCounter _ramCounter;
     private double _ramTotal;
-    public RamSensor() : base("RAM", "Initializing RAM sensor")
+    public RamSensor() : base("RAM")
     {
         _ramCounter = new PerformanceCounter("Memory", "Available MBytes");
         _ramTotal = GetTotalRam();
