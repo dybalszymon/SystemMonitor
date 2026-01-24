@@ -13,7 +13,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Pulpit Zasobów" FontSize="26" FontWeight="Bold" 
+        <TextBlock Text="Core Monitor" FontSize="26" FontWeight="Bold" 
                    Foreground="#333" Margin="0,0,0,20"/>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
