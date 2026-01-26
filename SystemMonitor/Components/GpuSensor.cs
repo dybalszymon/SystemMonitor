@@ -1,39 +1,60 @@
 ﻿using System.Diagnostics;
 using SystemMonitor.Core;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace SystemMonitor.Components;
 
 public class GpuSensor : BaseSensor
 {
+    private List<PerformanceCounter> _counters = new();
+
     public GpuSensor() : base("GPU")
     {
+        InitializeCounters();
     }
 
-    public override void Update()
+    private void InitializeCounters()
     {
         try
         {
             var category = new PerformanceCounterCategory("GPU Engine");
             var instances = category.GetInstanceNames();
-            float totalUsage = 0;
 
             foreach (var instance in instances)
             {
-                if (instance.EndsWith("engtype_3D"))
+                if (instance.EndsWith("engtype_3D") || instance.EndsWith("engtype_VideoDecode"))
                 {
-                    using var counter = new PerformanceCounter("GPU Engine", "Utilization Percentage", instance);
-                    totalUsage += counter.NextValue();
+                    var counter = new PerformanceCounter("GPU Engine", "Utilization Percentage", instance);
+                    counter.NextValue(); 
+                    _counters.Add(counter);
                 }
             }
-
-            CurrentValue = totalUsage;
-            DisplayText = $"{totalUsage:F1} %";
         }
-        catch
+        catch 
         {
-            DisplayText = "GPU Error";
-            CurrentValue = 0;
         }
+    }
+
+    public override void Update()
+    {
+        if (_counters.Count == 0)
+        {
+            InitializeCounters();
+        }
+
+        float totalUsage = 0;
+        foreach (var counter in _counters)
+        {
+            try 
+            {
+                totalUsage += counter.NextValue(); 
+            } 
+            catch 
+            {
+            }
+        }
+
+        CurrentValue = Math.Min(totalUsage, 100);
+        DisplayText = $"{CurrentValue:F1} %";
     }
 }
