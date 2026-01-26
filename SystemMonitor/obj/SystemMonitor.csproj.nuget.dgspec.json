@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\szymo\\RiderProjects\\SystemMonitor\\SystemMonitor\\SystemMonitor.csproj": {}
+    "C:\\Users\\piodo\\SystemMonitor\\SystemMonitor\\SystemMonitor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\szymo\\RiderProjects\\SystemMonitor\\SystemMonitor\\SystemMonitor.csproj": {
+    "C:\\Users\\piodo\\SystemMonitor\\SystemMonitor\\SystemMonitor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\szymo\\RiderProjects\\SystemMonitor\\SystemMonitor\\SystemMonitor.csproj",
+        "projectUniqueName": "C:\\Users\\piodo\\SystemMonitor\\SystemMonitor\\SystemMonitor.csproj",
         "projectName": "SystemMonitor",
-        "projectPath": "C:\\Users\\szymo\\RiderProjects\\SystemMonitor\\SystemMonitor\\SystemMonitor.csproj",
-        "packagesPath": "C:\\Users\\szymo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\szymo\\RiderProjects\\SystemMonitor\\SystemMonitor\\obj\\",
+        "projectPath": "C:\\Users\\piodo\\SystemMonitor\\SystemMonitor\\SystemMonitor.csproj",
+        "packagesPath": "C:\\Users\\piodo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\piodo\\SystemMonitor\\SystemMonitor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\szymo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\piodo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0-windows"
+          "net8.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0-windows7.0": {
-            "targetAlias": "net9.0-windows",
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
         },
@@ -39,12 +37,11 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
-        "net9.0-windows7.0": {
-          "targetAlias": "net9.0-windows",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
           "dependencies": {
             "LiveChartsCore.SkiaSharpView.WPF": {
               "target": "Package",
@@ -78,7 +75,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.414/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

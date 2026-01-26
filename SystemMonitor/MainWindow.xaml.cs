@@ -19,6 +19,10 @@ namespace SystemMonitor
             Sensors.Add(new CpuSensor());
             Sensors.Add(new RamSensor());
 
+            Sensors.Add(new GpuSensor());
+            Sensors.Add(new NetworkSensor());
+            Sensors.Add(new BatterySensor());
+
             //hard drivesensors
             foreach (var drive in DriveInfo.GetDrives())
             {
